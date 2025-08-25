@@ -1,7 +1,7 @@
 [![add-on registry](https://img.shields.io/badge/DDEV-Add--on_Registry-blue)](https://addons.ddev.com)
-[![tests](https://github.com/tyler36/ollama/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/tyler36/ollama/actions/workflows/tests.yml?query=branch%3Amain)
-[![last commit](https://img.shields.io/github/last-commit/tyler36/ollama)](https://github.com/tyler36/ollama/commits)
-[![release](https://img.shields.io/github/v/release/tyler36/ollama)](https://github.com/tyler36/ollama/releases/latest)
+[![tests](https://github.com/tyler36/ddev-ollama/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/tyler36/ddev-ollama/actions/workflows/tests.yml?query=branch%3Amain)
+[![last commit](https://img.shields.io/github/last-commit/tyler36/ddev-ollama)](https://github.com/tyler36/ddev-ollama/commits)
+[![release](https://img.shields.io/github/v/release/tyler36/ddev-ollama)](https://github.com/tyler36/ddev-ollama/releases/latest)
 
 # DDEV Ollama
 
@@ -14,7 +14,7 @@ This add-on integrates [Ollama](https://ollama.com/) into your [DDEV](https://dd
 ## Installation
 
 ```bash
-ddev add-on get tyler36/ollama
+ddev add-on get tyler36/ddev-ollama
 ddev restart
 ```
 
@@ -33,7 +33,7 @@ To change the Docker image:
 
 ```bash
 ddev dotenv set .ddev/.env.ollama --ollama-docker-image="ollama/ollama:latest"
-ddev add-on get tyler36/ollama
+ddev add-on get tyler36/ddev-ollama
 ddev restart
 ```
 

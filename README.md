@@ -45,6 +45,10 @@ All customization options (use with caution):
 | -------- | ---- | ------- |
 | `OLLAMA_DOCKER_IMAGE` | `--ollama-docker-image` | `ollama/ollama:latest` |
 
+> [!tip]
+> If you do not require GPU support, it is recommended to use [`alpine/ollama`](https://hub.docker.com/r/alpine/ollama)
+> It is significantly smaller, however, it be a week or 2 out of sync with the latest `ollama/ollama` image.
+
 ## Credits
 
 **Contributed and maintained by [@tyler36](https://github.com/tyler36)**

@@ -62,6 +62,22 @@ All customization options (use with caution):
 > If you do not require GPU support, it is recommended to use [`alpine/ollama`](https://hub.docker.com/r/alpine/ollama)
 > It is significantly smaller, however, it be a week or 2 out of sync with the latest `ollama/ollama` image.
 
+### API Endpoint
+
+When running Ollama locally, it is typically accessed at `http://localhost:11434`.
+However when using DDEV and Docker, access the Ollama server via the container name (`ollama:11434`). For example:
+
+```shell
+$ ddev exec curl ollama:11434
+Ollama is running
+```
+
+Many Ollama-compatible packages recommend setting this directly in an `.env`:
+
+```conf
+OLLAMA_BASE_URL=ollama:11434
+```
+
 ## Credits
 
 **Contributed and maintained by [@tyler36](https://github.com/tyler36)**

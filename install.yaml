@@ -2,5 +2,6 @@ name: ollama
 
 project_files:
   - docker-compose.ollama.yaml
+  - commands
 
 ddev_version_constraint: '>= v1.24.3'

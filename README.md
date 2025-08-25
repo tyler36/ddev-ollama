@@ -22,10 +22,23 @@ After installation, make sure to commit the `.ddev` directory to version control
 
 ## Usage
 
-| Command | Description |
-| ------- | ----------- |
-| `ddev describe` | View service status and used ports for Ollama |
-| `ddev logs -s ollama` | Check Ollama logs |
+`ddev ollama` is a helper command allowing developers to interact with the Ollama service.
+The table below disable some commonly-used commands. Type `ddev ollama --help` to see all available commands.
+
+| Command                   | Description                                                              |
+| ------------------------- | ------------------------------------------------------------------------ |
+| `ddev ollama run <model>` | Run a model. Models will automatically download if not available locally |
+| `ddev ollama stop`        | Stop a running model                                                     |
+| `ddev ollama list`        | List models                                                              |
+| `ddev ollama ps`          | List running models                                                      |
+| `ddev ollama --help`      | Show available commands                                                  |
+
+### Other Commands
+
+| Command               | Description                                   |
+| --------------------- | --------------------------------------------- |
+| `ddev describe`       | View service status and used ports for Ollama |
+| `ddev logs -s ollama` | Check Ollama logs                             |
 
 ## Advanced Customization
 
@@ -41,8 +54,8 @@ Make sure to commit the `.ddev/.env.ollama` file to version control.
 
 All customization options (use with caution):
 
-| Variable | Flag | Default |
-| -------- | ---- | ------- |
+| Variable              | Flag                    | Default                |
+| --------------------- | ----------------------- | ---------------------- |
 | `OLLAMA_DOCKER_IMAGE` | `--ollama-docker-image` | `ollama/ollama:latest` |
 
 > [!tip]

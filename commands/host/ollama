@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+#ddev-generated
+## Description: Run ollama commands
+## Usage: ollama
+## Example: "ddev ollama --help", "ddev ollama run llama3.2:latest"
+
+ddev exec -s ollama ollama "$@"

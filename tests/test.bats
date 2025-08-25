@@ -67,6 +67,21 @@ teardown() {
   health_checks
 }
 
+@test "run ollama command from host" {
+  set -eu -o pipefail
+
+  echo "# ddev add-on get ${DIR} with project ${PROJNAME} in $(pwd)" >&3
+  run ddev add-on get "${DIR}"
+  assert_success
+
+  run ddev restart -y
+  assert_success
+
+  DDEV_DEBUG=true run ddev ollama --help
+  assert_output --partial "Large language model runner"
+  assert_output --partial "ollama [command]"
+}
+
 # bats test_tags=release
 @test "install from release" {
   set -eu -o pipefail

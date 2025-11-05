@@ -23,7 +23,7 @@ After installation, make sure to commit the `.ddev` directory to version control
 ## Usage
 
 `ddev ollama` is a helper command allowing developers to interact with the Ollama service.
-The table below disable some commonly-used commands. Type `ddev ollama --help` to see all available commands.
+The table below describes some commonly-used commands. Type `ddev ollama --help` to see all available commands.
 
 | Command                   | Description                                                              |
 | ------------------------- | ------------------------------------------------------------------------ |

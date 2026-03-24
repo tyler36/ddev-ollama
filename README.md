@@ -78,6 +78,35 @@ Many Ollama-compatible packages recommend setting this directly in an `.env`:
 OLLAMA_BASE_URL=ollama:11434
 ```
 
+### NVIDIA GPU Support
+
+> [!Note]
+> NVIDIA GPU support is only available for Linux and WSL2.
+
+To allow the Ollama container to use your GPU,
+
+1. Install [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
+2. Create `.ddev/docker-compose.ollama-gpu.yaml` and add the following:
+
+    ```yml
+    # .ddev/docker-compose.ollama-gpu.yaml
+    services:
+      ollama:
+        deploy:
+          resources:
+            reservations:
+              devices:
+                - driver: nvidia
+                  count: all
+                  capabilities: [gpu]
+    ```
+
+3. Restart DDEV to apply changes
+
+    ```shell
+    ddev restart
+    ```
+
 ## Credits
 
 **Contributed and maintained by [@tyler36](https://github.com/tyler36)**
